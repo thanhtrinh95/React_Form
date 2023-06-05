@@ -15,6 +15,11 @@ class TableSinhVien extends Component {
             payload: e
         }
         this.props.dispatch(action)
+        const disabled = {
+            type: "HANDLE_DISABLE",
+            payload: null
+        }
+        this.props.dispatch(disabled)
     }
     render() {
         const { mangSinhVien } = this.props;
